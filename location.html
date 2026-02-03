@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Locator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name=author" content="Sarah Wild">
+    <meta name="description" content="Page to view your location relative to sunbuck branches">
+    <link href="style.css" rel="stylesheet">
+    <script>
+        const CONFIGURATION = {
+            "locations": [
+                { "title": "128 Newcastle St", "address1": "128 Newcastle St", "address2": "Burslem, Stoke-on-Trent ST6 3QH, UK", "coords": { "lat": 53.04343804972366, "lng": -2.205556493254095 }, "placeId": "ChIJF10jW75CekgRjADPk9MZr30" },
+                { "title": "11 Moorland Rd", "address1": "11 Moorland Rd", "address2": "Burslem, Stoke-on-Trent ST6 1DP, UK", "coords": { "lat": 53.04605244762447, "lng": -2.1957236355819676 }, "placeId": "EjMxMSBNb29ybGFuZCBSZCwgQnVyc2xlbSwgU3Rva2Utb24tVHJlbnQgU1Q2IDFEUCwgVUsiMBIuChQKEgnhOYRBk0J6SBE0xCja_76iexALKhQKEgm_ka8qjUJ6SBGDuh-ZTiJYyg" },
+                { "title": "129 Hamil Rd", "address1": "129 Hamil Rd", "address2": "Burslem, Stoke-on-Trent ST6 1AP, UK", "coords": { "lat": 53.05017429129528, "lng": -2.189895903041086 }, "placeId": "ChIJIbOpffJCekgR4F3B817A-Rc" }
+            ],
+            "mapOptions": { "center": { "lat": 38.0, "lng": -100.0 }, "fullscreenControl": true, "mapTypeControl": false, "streetViewControl": false, "zoom": 4, "zoomControl": true, "maxZoom": 17, "mapId": "" },
+            "mapsApiKey": "YOUR_API_KEY_HERE",
+            "capabilities": { "input": true, "autocomplete": true, "directions": false, "distanceMatrix": true, "details": false, "actions": false }
+        };
+
+    </script>
+    <script src="script.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <picture>
+            <source srcset="./images/coffee_heart.webp" media="(max-width: 36rem)"
+                alt="Coffee cup with heart latte art">
+            <!---->
+            <source srcset="./images/coffee_steam_64x64.webp" media="(min-width: 36rem) and (max-width: 48rem)"
+                alt="coffee cup with steam coming up">
+            <!---->
+            <source srcset="./images/coffee_3.webp" media="(min-width: 48rem) and (max-width: 62rem)"
+                alt="coffe in mug on table">
+            <!---->
+            <source srcset="./images/banner_1200x400.webp" media="(min-width: 62rem)" alt="coffee cup on a ">
+            <!---->
+            <img src="./images/banner_1200x400.webp" alt="Coffee cup on table" />
+        </picture>
+        <H1>Store Finder</H1>
+    </header>
+    <nav>
+        <ul>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="order.html">Order</a>
+            <a href="location.html">Store Finder</a>
+        </ul>
+    </nav>
+    <script type="module"
+        src="https://ajax.googleapis.com/ajax/libs/@googlemaps/extended-component-library/0.6.11/index.min.js"></script>
+
+    <gmpx-api-loader key="YOUR_API_KEY_HERE"
+        solution-channel="GMP_QB_locatorplus_v11_cABD"></gmpx-api-loader>
+    <gmpx-store-locator map-id="DEMO_MAP_ID"></gmpx-store-locator>
+</body>
+<footer>
+    <p>w014189o for web dev University of staffordshire</p>
+    <footer />
+
+</html>

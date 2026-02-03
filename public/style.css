@@ -1,0 +1,355 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+}
+
+nav {
+    background-color: #edbf9e;
+    max-width: 100%;
+}
+
+.grids {
+    display: grid;
+    gap: 1.5rem;
+    padding: 1rem;
+
+    img {
+        width: 100%;
+        height: 12rem;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+footer {
+    color: #2B1B12;
+    background-color: #edbf9e;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+}
+
+@media only screen and (prefers-color-scheme: light) {
+    :root {
+        --bg-main: #FAF3E8;
+        --bg-card: #FFFFFF;
+        --text-primary: #2B1B12;
+        --accent-main: #F4B860;
+    }
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+    :root {
+        --bg-main: #1F1F1F;
+        --bg-card: #2A2A2A;
+        --text-primary: #FAF3E8;
+    }
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+@media screen and (max-width: 36rem) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;
+    }
+
+    header h1 {
+        margin-left: 10px;
+        flex-grow: 1;
+    }
+
+    picture img {
+        display: block;
+        max-width: 3rem;
+        height: auto;
+    }
+
+    nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #ebc0a0;
+        z-index: 1000;
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            margin: 0;
+            padding: 15px 0;
+
+            a {
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .grids {
+        display: grid;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas:
+            "title"
+            "card1"
+            "card2"
+            "card3"
+            "card4";
+    }
+}
+
+
+@media screen and (min-width: 36rem) and (max-width: 48rem) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;
+    }
+
+    header h1 {
+        margin-left: 10px;
+        flex-grow: 1;
+    }
+
+    picture img {
+        display: block;
+        max-width: 6rem;
+        height: auto;
+    }
+
+    nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #ebc0a0;
+        z-index: 1000;
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            margin: 0;
+            padding: 15px 0;
+
+            a {
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
+            }
+        }
+    }
+
+
+    .grids {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "title title"
+            "card1 card2"
+            "card3 card4";
+    }
+
+}
+
+@media screen and (min-width: 48rem) and (max-width: 62rem) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;
+    }
+
+    header h1 {
+        margin-left: 10px;
+        flex-grow: 1;
+    }
+
+    picture img {
+        display: block;
+        max-width: 4rem;
+        height: auto;
+    }
+
+    nav {
+        position: sticky;
+        top: 0;
+        background: #ebc0a0;
+        width: 100%;
+        z-index: 1000;
+
+        ul {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+            padding: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+    }
+
+    .grids {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        ;
+        grid-template-areas:
+            "title title"
+            "card1 card2"
+            "card3 card4";
+    }
+
+}
+
+@media screen and (min-width: 62rem) {
+    header {
+        width: 100%;
+
+        h1 {
+            display: none;
+        }
+
+        img {
+            display: block;
+            width: 99vw;
+            height: 25vw;
+        }
+
+    }
+
+    nav {
+        position: sticky;
+        top: 0;
+        background: #ebc0a0;
+        width: 100%;
+        z-index: 1000;
+
+        ul {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+            padding: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 2rem;
+            color: black;
+            font-weight: bold;
+        }
+    }
+
+    .grids {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "title title title title"
+            "card1 card2 card3 card4";
+
+        img {
+            height: 15rem;
+        }
+    }
+}
+
+
+h2,
+h3 {
+    color: var(--text-primary);
+}
+
+h2 {
+    grid-area: title;
+    text-align: left;
+}
+
+.card1 {
+    grid-area: card1;
+}
+
+.card2 {
+    grid-area: card2;
+}
+
+.card3 {
+    grid-area: card3;
+}
+
+.card4 {
+    grid-area: card4;
+}
+
+.card1,
+.card2,
+.card3,
+.card4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-soft);
+}
+
+button {
+    background-color: var(--accent-main);
+    color: #2B1B12;
+}
+
+/*Order page css*/
+.option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    label {
+        flex: 1;
+    }
+}
+
+.quantity {
+    width: 60px;
+}
+
+/*Store finder*/
+
+gmpx-store-locator {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    --gmpx-color-surface: #fff;
+    --gmpx-color-on-surface: #212121;
+    --gmpx-color-on-surface-variant: #757575;
+    --gmpx-color-primary: #1967d2;
+    --gmpx-color-outline: #e0e0e0;
+    --gmpx-fixed-panel-width-row-layout: 28.5em;
+    --gmpx-fixed-panel-height-column-layout: 65%;
+    --gmpx-font-family-base: "Roboto", sans-serif;
+    --gmpx-font-family-headings: "Roboto", sans-serif;
+    --gmpx-font-size-base: 0.875rem;
+    --gmpx-hours-color-open: #188038;
+    --gmpx-hours-color-closed: #d50000;
+    --gmpx-rating-color: #ffb300;
+    --gmpx-rating-color-empty: #e0e0e0;
+}

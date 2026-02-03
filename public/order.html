@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sarah Wild">
+    <meta name="description" content="Page to order items">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Order</title>
+</head>
+
+<body>
+    <header>
+        <picture>
+            <source srcset="./images/coffee_heart.webp" media="(max-width: 36rem)" alt="Coffee cup with heart latte art">
+            <!---->
+            <source srcset="./images/coffee_steam_64x64.webp" media="(min-width: 36rem) and (max-width: 48rem)" alt="coffee cup with steam coming up">
+            <!---->
+            <source srcset="./images/coffee_3.webp" media="(min-width: 48rem) and (max-width: 62rem)" alt="coffe in mug on table">
+            <!---->
+            <source srcset="./images/banner_1200x400.webp" media="(min-width: 62rem)" alt="coffee cup on a ">
+            <!---->
+            <img src="./images/banner_1200x400.webp" alt="Coffee cup on table"/>
+        </picture>
+        <H1>Order</H1>
+    </header>
+    <main>
+        <nav>
+            <ul>
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="order.html">Order</a>
+                <a href="location.html">Store Finder</a>
+            </ul>
+        </nav>
+        <h1>Order</h1>
+        <form>
+            <h2>Milkshakes</h2>
+            <dev class="options">
+            <input type="checkbox" class="myCheck" onchange="toggleQuantity(this)">
+            <label>Vanilla</label><br>
+            </dev>
+
+            <dev class="options">
+            <input type="checkbox" class="myCheck" onchange="toggleQuantity(this)">
+            <label>Banana</label><br>
+            </dev>
+            
+            <dev class="options">
+            <input type="checkbox" class="myCheck" onchange="toggleQuantity(this)">
+            <label>Strawberry</label><br>
+            </dev>
+
+            <dev class="options">
+            <input type="checkbox" class="myCheck" onchange="toggleQuantity(this)">
+            <label>Chocolate</label><br>
+            </dev>
+
+            <h2>Smoothies</h2>
+            <dev class="options">
+            <input type="checkbox" class="myCheck" onchange="toggleQuantity(this)">
+            <label>Mango</label><br>
+            </dev>
+
+            <dev class="options">
+            <input type="checkbox" class="myCheck" onchange="toggleQuantity(this)">
+            <label>Pinapple</label><br>
+            </dev>
+            
+            <dev class="options">
+            <input type="checkbox" class="myCheck" onchange="toggleQuantity(this)">
+            <label>Mixed berries</label><br>
+            </dev>
+
+            <dev class="options">
+            <input type="checkbox" class="myCheck" onchange="toggleQuantity(this)">
+            <label>Green</label><br>
+            </dev>
+
+            <h2>Hot Drinks</h2>
+            <dev class="options">
+            <input type="checkbox" class="myCheck" onchange="toggleQuantity(this)">
+            <label>Latte</label><br>
+            </dev>
+
+            <dev class="options">
+            <input type="checkbox" class="myCheck" onchange="toggleQuantity(this)">
+            <label>Cappuccino</label><br>
+            </dev>
+            
+            <dev class="options">
+            <input type="checkbox" class="myCheck" onchange="toggleQuantity(this)">
+            <label>Black</label><br>
+            </dev>
+
+            <dev class="options">
+            <input type="checkbox" class="myCheck" onchange="toggleQuantity(this)">
+            <label>Hot Chocolate</label><br>
+            </dev>
+
+            <h2>Oatcakes</h2>
+            <dev class="options">
+            <input type="checkbox" class="myCheck" onchange="toggleQuantity(this)">
+            <label>Cheese</label><br>
+            </dev>
+
+            <dev class="options">
+            <input type="checkbox" class="myCheck" onchange="toggleQuantity(this)">
+            <label>Cheese and Bacon</label><br>
+            </dev>
+            
+            <dev class="options">
+            <input type="checkbox" class="myCheck" onchange="toggleQuantity(this)">
+            <label>Egg</label><br>
+
+            </dev>
+
+            <dev class="options">
+            <input type="checkbox" class="myCheck" onchange="toggleQuantity(this)">
+            <label>Cheese and Sausage</label><br>
+            </dev>
+
+        </form>
+    </main>
+    <footer>
+        <p>w014189o for web dev University of staffordshire</p>
+    </footer>
+</body>
+</html>
